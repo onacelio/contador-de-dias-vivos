@@ -6,7 +6,8 @@
 }
 
 :root {
-    --fonte-principal: 'Ubuntu', sans-serif;;
+    --fonte-principal: 'Ubuntu', sans-serif;
+    --background-dark: #060607;
 }
 
 body {
@@ -32,6 +33,19 @@ section.inputs {
     gap: 10%;
 }
 
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+label button {
+    width: 50%;
+    height: 100%;
+}
+
 #date {
     width: 20em;
     height: 50px;
@@ -39,12 +53,22 @@ section.inputs {
     font-size: 1em;
     border-radius: 3px;
     border: none;
-    border-bottom: 3px solid rgba(139, 42, 42, 0.753)
+    border-bottom: 3px solid #f75d5b;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#date:focus {
+    background-color: #f75d5b;
 }
 
 button {
     width: 100px;
     height: 55px;
+    border: 2px solid #f75d5b;
+    border-radius: 3px;
+    background-color: #f75d5b;
+    cursor: pointer;
 }
 
 section.info {
@@ -52,8 +76,10 @@ section.info {
     align-items: center;
     justify-content: center;
     gap: 25px;
-    height: 50%;
+    height: 30%;
     width: 100%;
+    text-align: center;
+    margin-top: -10%;
 }
 
 footer {
@@ -65,3 +91,37 @@ footer {
     text-transform: uppercase;
 }
 
+footer a {
+    text-decoration: none;
+    color: #f75d5b;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+body.dark {
+    background-color: var(--background-dark);
+    color: #f0f8ff;
+}
+
+body.dark #date {
+    background-color: var(--background-dark);
+    color: #f0f8ff;
+    border-bottom: 3px solid #359dfc;
+}
+
+body.dark #date:focus {
+    transition: 1s;
+    background-color: #359dfc;
+}
+
+body.dark button {
+    background-color: #359dfc;
+    border: 2px solid #359dfc;
+}
+
+body.dark footer a {
+    color: #359dfc;
+    transition: 1s ;
+} 

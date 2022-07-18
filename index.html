@@ -12,12 +12,12 @@
 
     <main>
         <section class="inputs">
-            <label for="date">INSIRA SUA DATA DE NASCIMENTO</label>
+            <label for="date">INSIRA SUA DATA DE NASCIMENTO <button id="teme" onclick="mudarTema()" value="true">TEMA CLARO</button></label> 
             <input type="date" value="" id="date">
             <button type="submit" onclick="submitDate()" value="">CALCULAR</button>
         </section>
 
-        <section class="info">
+        <section class="info" id="info">
             <div class="time">
                 <h1 class="days">00</h1>
                 <p>DIAS</p>
@@ -38,9 +38,10 @@
     </main>
     
     <footer>
-        Desenvolvido por: O Nacélio
+        <p>Desenvolvido por: <a href="https://instagram.com/eunacelio/" target="_blank"> O Nacélio!</a></p>
     </footer>
 
     <script src="assets/script.js"></script>
+    <script src="assets/tema.js"></script>
 </body>
 </html>
